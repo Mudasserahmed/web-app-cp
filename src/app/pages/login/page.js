@@ -1,4 +1,3 @@
-
 "use client"
 import React, { useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
@@ -50,13 +49,7 @@ export default function Login({}) {
           <div className="text-center mt-6 px-4">
             <div
               className="bg-slate-800 cursor-pointer text-white active:bg-slate-600 text-sm font-bold uppercase px-6 h-12 flex items-center justify-center rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
-              onClick={() => {
-                if (!loader) {
-                  if (validate()) {
-                    _login();
-                  }
-                }
-              }}
+              onClick={()=>router.push("/pages/dashboard")}
             >
             Login
             </div>

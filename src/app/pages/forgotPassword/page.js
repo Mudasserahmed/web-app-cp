@@ -2,6 +2,7 @@
 "use client"
 import React, { useState } from "react";
 import InputField from "src/components/Inputs/InputField";
+
 export default function ForgetPassword() {
 
   return (

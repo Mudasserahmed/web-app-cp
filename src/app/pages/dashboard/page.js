@@ -5,8 +5,8 @@ import "react-quill/dist/quill.snow.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-function Page() {
-  //initial state values
+function Dashboard() {
+  // state values
   const [blogData, setBlogData] = useState({
     title: "",
     quill: "",
@@ -46,6 +46,7 @@ function Page() {
       toast.error("All Fields are Required")
       return;
     }
+    toast.success("blog created waiting for api endpoint ")
     console.log("blog data>>>>",blogData)
     setBlogData({
       title: "",
@@ -95,7 +96,7 @@ function Page() {
                 htmlFor="company"
                 className="block text-sm font-semibold leading-6 text-gray-900"
               >
-                Title
+                Title <span className="text-red-600">*</span>
               </label>
               <div className="mt-2.5">
                 <input
@@ -105,6 +106,7 @@ function Page() {
                   onChange={(e) => handleChange("title", e)}
                   className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
+                
               </div>
             </div>
             <div className="sm:col-span-2 mb-5">
@@ -112,7 +114,7 @@ function Page() {
                 htmlFor="message"
                 className="block text-sm font-semibold leading-6 text-gray-900"
               >
-                Description
+                Description <span className="text-red-600">*</span>
               </label>
               <div className="mt-2.5 mb-14 sm:mb-5">
                 <ReactQuill
@@ -130,11 +132,12 @@ function Page() {
               htmlFor="company"
               className="block text-sm font-semibold leading-6 text-gray-900"
             >
-              Upload Image
+              Upload Image <span className="text-red-600">*</span>
             </label>
             <div className="mt-2.5">
               <input
                 name="file"
+                // value={blogData?.file}
                 onChange={(e) => handleFileChange(e.target.files[0])}
                 type="file"
                 className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -157,4 +160,4 @@ function Page() {
   );
 }
 
-export default Page;
+export default Dashboard;

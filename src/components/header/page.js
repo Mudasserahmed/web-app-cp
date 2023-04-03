@@ -6,8 +6,8 @@ export default function Header({pageTitle}) {
 //   const pageTitle = router.pathname.replace('/', '');
 
   return (
-    <header className="bg-gray-300 h-20  z-10">
-        <h1 className="text-xl font-bold md:pl-80 pt-4"> {pageTitle} </h1>
+    <header className="bg-gray-100 h-20  z-10">
+        <h1 className="text-xl font-bold md:pl-80 pt-6 text-[#1E293B]"> {pageTitle} </h1>
         </header>
   );
 }

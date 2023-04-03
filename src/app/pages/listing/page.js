@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { useRouter } from "next/navigation";
+import Header from "@/components/header/page";
 function Listing() {
   const router = useRouter();
   const list = [
@@ -27,15 +28,18 @@ function Listing() {
   ];
   return (
     <>
+      <Header pageTitle={"Listing Page"}/>
       <div className="py-24 lg:ml-72 lg:mr-3 ">
         <div class="relative overflow-x-auto">
+           
           <button
             type="button"
             onClick={()=>router.push("/pages/dashboard")}
-            class="py-2.5 px-5 float-right mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+            class="py-2.5 px-5 float-right mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-[#1E293B] rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
           >
             Create New
           </button>
+        
           <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>

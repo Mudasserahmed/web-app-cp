@@ -77,7 +77,7 @@ function Dashboard() {
   };
   return (
     <> 
-        {/* <Header pageTitle={"Create Blog"}/>  */}
+        <Header pageTitle={"Create Blog"}/> 
     <main className=" bg-[#F1F5F9]  py-24 px-6  lg:px-8 flex justify-center items-center ">
       <div className="bg-white py-5 mx-4 px-5  lg:w-6/12 md:w-6/12 ">
         <div className=" text-center">

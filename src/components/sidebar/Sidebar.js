@@ -33,7 +33,7 @@ function Sidebar() {
         className="fixed top-0 left-0 z-40 w-64 h-full transition-transform  -translate-x-full sm:translate-x-0"
         aria-label="Sidebar"
       >
-        <div className="h-full px-3 py-4 overflow-y-auto bg-gray-700 text-white dark:bg-gray-800">
+        <div className="h-full px-3 py-4 overflow-y-auto bg-[#1E293B] text-white dark:bg-gray-800">
           <a href="https://flowbite.com/" className="flex items-center pl-2.5 mb-5">
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
               Web App Admin Panel

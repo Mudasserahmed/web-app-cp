@@ -27,10 +27,10 @@ function Sidebar() {
           ></path>
         </svg>
       </button>
-
+    
       <aside
         id="logo-sidebar"
-        className="fixed top-0 left-0 z-40 w-64 h-full transition-transform  -translate-x-full sm:translate-x-0"
+        className="fixed top-0 left-0 z-40 w-64 h-full transition-transform  -translate-x-full md:translate-x-0"
         aria-label="Sidebar"
       >
         <div className="h-full px-3 py-4 overflow-y-auto bg-[#1E293B] text-white dark:bg-gray-800">
@@ -56,14 +56,7 @@ function Sidebar() {
                 <span className="ml-3">Listing</span>
               </a>
             </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center p-2  rounded-lg dark:text-white hover:bg-gray-100 hover:text-black dark:hover:bg-gray-700"
-              >
-                <span className="ml-3">other</span>
-              </a>
-            </li>
+
           </ul>
         </div>
       </aside>

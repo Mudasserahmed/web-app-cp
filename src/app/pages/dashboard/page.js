@@ -1,4 +1,5 @@
 "use client";
+import Header from "@/components/header/page";
 import React, { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
@@ -75,7 +76,9 @@ function Dashboard() {
     },
   };
   return (
-    <main className=" bg-[#F1F5F9]  py-24 px-6  lg:px-8 flex justify-center items-center">
+    <> 
+        {/* <Header pageTitle={"Create Blog"}/>  */}
+    <main className=" bg-[#F1F5F9]  py-24 px-6  lg:px-8 flex justify-center items-center ">
       <div className="bg-white py-5 mx-4 px-5  lg:w-6/12 md:w-6/12 ">
         <div className=" text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -158,6 +161,7 @@ function Dashboard() {
         <ToastContainer />
       </div>
     </main>
+    </>
   );
 }
 

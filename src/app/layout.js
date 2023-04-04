@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        {pathName !== "/pages/login" && <Sidebar />}
+        {pathName !== "/pages/login" && pathName !== "/pages/forgotPassword" && <Sidebar />}
         {children}
       </body>
     </html>

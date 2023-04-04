@@ -82,7 +82,7 @@ function Dashboard() {
   return (
     <>
       <Header pageTitle={"Create Blog"} />
-      <main className="  py-24 px-6  lg:px-8 flex justify-center  items-center ">
+      <main className=" py-10 px-6 lg:px-8 flex justify-center  items-center ">
         <div className=" py-5 mx-4 px-5 border-2  md:ml-64  lg:w-6/12 md:w-8/12 ">
           <div className=" text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">

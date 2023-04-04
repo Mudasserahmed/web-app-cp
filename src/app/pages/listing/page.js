@@ -32,15 +32,15 @@ function Listing() {
   return (
     <>
       <Header pageTitle={"Listing Page"} />
-      <div className="py-24 lg:ml-72 md:ml-60  lg:mr-3 md:mr-4">
-        <div class="relative overflow-x-auto">
           <button
             type="button"
             onClick={() => router.push("/pages/dashboard")}
-            class="py-2.5 px-5 float-right mr-2 mb-2 text-sm font-medium text-white hover:bg-[#1E293B] hover:text-white  focus:outline-none bg-[#1E293B] rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+            class="py-2.5 mt-11 px-5 float-right mr-2 mb-2 text-sm font-medium text-white   focus:outline-none bg-slate-800  rounded-lg border border-gray-200  focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
           >
             Create New
           </button>
+      <div className="py-24 lg:ml-72 md:ml-64  lg:mr-3 md:mr-4">
+        <div class="relative overflow-x-auto">
 
           <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 max-w-full">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">

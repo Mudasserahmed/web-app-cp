@@ -1,13 +1,35 @@
 "use client"
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function Sidebar() {
+  const [isOpen, setIsOpen] = useState(false)
+
+   //handling sidebar toggle
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen)
+  }
+  
+  //handling window resize 
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth < 768) {
+        setIsOpen(false);
+      } else {
+        setIsOpen(true);
+      }
+    }
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+   
   return (
     <>
     
       <button
         data-drawer-target="logo-sidebar"
         data-drawer-toggle="logo-sidebar"
+        onClick={toggleSidebar}
         aria-controls="logo-sidebar"
         type="button"
         className="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -30,7 +52,10 @@ function Sidebar() {
     
       <aside
         id="logo-sidebar"
-        className="fixed top-0 left-0c scroll-smooth z-40 w-64 h-full transition-transform  -translate-x-full md:translate-x-0"
+        className={`fixed top-0 left-0c scroll-smooth z-40 w-64 h-full transition-transform md:translate-x-0 ${
+          isOpen ? '' : '-translate-x-full'
+        }`}
+        // className="fixed top-0 left-0c scroll-smooth z-40 w-64 h-full transition-transform  -translate-x-full    md:translate-x-0"
         aria-label="Sidebar"
       >
         <div className="h-full px-3 py-4 overflow-y-auto bg-[#1E293B] text-white dark:bg-gray-800 ">
